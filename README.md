@@ -39,7 +39,7 @@ npm -v
 node -v
 ```
 
-2. Setting up
+2. Setting up (entry point server.js)
 ```
 npm init
 ```
@@ -52,6 +52,14 @@ npm install --save express mongodb body-parser
 3.1. Install development dependencies (optional)
 ```
 npm install --save-dev nodemon
+```
+
+3.2. Set up nodemon
+```
+// package.json
+"scripts": {
+  "dev": "nodemon server.js"
+}
 ```
 
 4. Download and install [Postman](https://www.getpostman.com/downloads/)
