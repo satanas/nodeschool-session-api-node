@@ -64,6 +64,25 @@ npm install --save-dev nodemon
 
 4. Download and install [Postman](https://www.getpostman.com/downloads/)
 
+# Our first endpoint
+
+```javascript
+// server.js
+
+const express = require('express');
+
+const port = 8000;
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello world');
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
+```
+
 ## References
 * https://money.howstuffworks.com/business-communications/how-to-leverage-an-api-for-conferencing1.htm
 * https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82
