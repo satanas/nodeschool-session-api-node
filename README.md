@@ -1,4 +1,22 @@
-# NodeSchool Focused Session - How to build an API with Node.js, Mongo and Express
+# How to build an API with Node.js, Mongo and Express
+
+In this course, we will set up everything from scratch but we will also iterate over our code until we get
+our desired application. In order to track those changes easily, I have separated each step of development into
+branches, that way you can see the "state" of the API throughout the different stages of development.
+
+So far the stages are:
+* [step_1_setup](https://github.com/satanas/nodeschool-session-api-node/tree/step_1_setup): initial
+configuration for the application (package.json, setup, etc).
+* [step_2_first_endpoint](https://github.com/satanas/nodeschool-session-api-node/tree/step_2_first_endpoint): code to
+generate a Hello World endpoint.
+* [step_3_create_elements](https://github.com/satanas/nodeschool-session-api-node/tree/step_3_create_elements): code to
+create a POST resource to create elements.
+* [step_4_fetch_elements](https://github.com/satanas/nodeschool-session-api-node/tree/step_4_fetch_elements): code to
+create a GET resource to fetch a single element and a collection of elements.
+* [step_5_update_element](https://github.com/satanas/nodeschool-session-api-node/tree/step_5_update_element): code to
+create a PUT resource that will let us update existing elements.
+* [step_6_delete_element](https://github.com/satanas/nodeschool-session-api-node/tree/step_6_delete_element): code to
+create a DELETE resource that will let us remove elements from the database.
 
 # Agenda
 In this focused session we will see:
@@ -192,6 +210,9 @@ PUT https://jsonplaceholder.typicode.com/posts/{id}
 
 ### Delete existing element
 DELETE https://jsonplaceholder.typicode.com/posts/{id}
+
+
+# How to organize our code
 
 # References
 * https://expressjs.com/
