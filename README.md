@@ -86,7 +86,18 @@ npm install --save-dev nodemon
 }
 ```
 
-4. Download and install [Postman](https://www.getpostman.com/downloads/)
+4. Install MongoDB
+* Download the right MongoDB version from [MongoDB](https://www.mongodb.org/downloads)
+* Create a database directory
+```
+mkdir data
+```
+* Install and start a `mongod` process.
+```
+mongod --dbpath=data
+```
+
+5. Download and install [Postman](https://www.getpostman.com/downloads/)
 
 # Our first endpoint
 
