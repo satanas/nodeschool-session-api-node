@@ -225,6 +225,11 @@ DELETE https://jsonplaceholder.typicode.com/posts/{id}
 
 # How to organize our code
 
+# Exercises
+
+1. Implement PATCH endpoint
+2. Implement search
+
 # References
 * https://expressjs.com/
 * https://money.howstuffworks.com/business-communications/how-to-leverage-an-api-for-conferencing1.htm
