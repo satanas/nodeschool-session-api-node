@@ -12,7 +12,7 @@ async function createHandler(db, req, res) {
   };
 
   const result = await db.collection('characters').insertOne(character);
-  res.send(character);
+  res.status(201).send(character);
 };
 
 // Check https://github.com/chriso/validator.js#validators for more validation rules

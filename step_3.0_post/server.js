@@ -35,11 +35,7 @@ MongoClient.connect(dbUrl, { useNewUrlParser: true })
     };
 
     const result = await db.collection('characters').insertOne(character);
-    character.links = [{
-      rel: "self",
-      href: `${req.protocol}://${req.hostname}:${port}/characters/${character._id}`
-    }];
-    res.send(character);
+    res.status(201).send(character);
   });
 
   app.listen(port, () => {

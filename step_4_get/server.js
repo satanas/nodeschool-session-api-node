@@ -40,7 +40,7 @@ MongoClient.connect(dbUrl, { useNewUrlParser: true })
     };
 
     const result = await db.collection('characters').insertOne(character);
-    res.send(character);
+    res.status(201).send(character);
   });
 
   app.get('/characters', async (req, res) => {

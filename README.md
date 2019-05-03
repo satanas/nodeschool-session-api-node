@@ -227,8 +227,12 @@ DELETE https://jsonplaceholder.typicode.com/posts/{id}
 
 # Exercises
 
-1. Implement PATCH endpoint
-2. Implement search
+https://docs.mongodb.com/manual/reference/
+
+* Avoid inserting duplicates
+* Enhance POST and PUT validations
+* Implement PATCH endpoint
+* Implement search
 
 # References
 * https://expressjs.com/
@@ -239,3 +243,4 @@ DELETE https://jsonplaceholder.typicode.com/posts/{id}
 * https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
 * https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 * https://en.wikipedia.org/wiki/URL
+* https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
