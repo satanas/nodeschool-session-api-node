@@ -49,6 +49,11 @@ MongoClient.connect(dbUrl, { useNewUrlParser: true })
   });
 
   app.get('/characters/:id', fetchCharValidationRules, async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
     const results = await db.collection('characters').find({ _id: ObjectId(req.params.id) }).toArray();
     res.send(results);
   });
