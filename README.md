@@ -229,6 +229,7 @@ DELETE https://jsonplaceholder.typicode.com/posts/{id}
 
 https://docs.mongodb.com/manual/reference/
 
+* Config for db and port variables
 * Avoid inserting duplicates
 * Enhance POST and PUT validations
 * Implement PATCH endpoint
@@ -244,3 +245,5 @@ https://docs.mongodb.com/manual/reference/
 * https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 * https://en.wikipedia.org/wiki/URL
 * https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+* https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2
+* https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
