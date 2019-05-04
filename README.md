@@ -20,6 +20,8 @@ to retrieve a single element and a collection.
 update existing elements.
 * [step_7_destroy](https://github.com/satanas/nodeschool-session-api-node/tree/master/step_7_destroy): DELETE resource
 to remove elements from the database.
+* [step_8_middleware](https://github.com/satanas/nodeschool-session-api-node/tree/master/step_8_middleware): how to
+create a function that will log useful information about each request.
 
 # Agenda
 In this focused session we will see:
@@ -28,8 +30,7 @@ In this focused session we will see:
 * [Dependencies: Installation and setup]()
 * [Our first endpoint]()
 * [What is REST and why we should care about it?]()
-* [How to organize our code]()
-* [Building an API for a To-Do list]()
+* [Let's code!]()
 
 # What is an API and why we need it?
 
@@ -60,13 +61,14 @@ https://jsonplaceholder.typicode.com/todos/1
 
 # Dependencies: Installation and setup
 
-1. Check your node and npm versions:
+1. Check your node and npm versions and make sure you have installed node >= 8.0.0. If not, we recommend installing it
+via [NVM (node version manager)](https://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/).
 ```
 npm -v
 node -v
 ```
 
-2. Setting up (entry point server.js)
+2. Setting our node application up:
 ```
 npm init
 ```
@@ -91,11 +93,11 @@ npm install --save-dev nodemon
 
 4. Install MongoDB
 * Download the right MongoDB version from [MongoDB](https://www.mongodb.org/downloads)
-* Create a database directory
+* Create a database directory where you want to store the database files:
 ```
 mkdir data
 ```
-* Install and start a `mongod` process.
+* Install and start a `mongod` process pointing to the directory you just created:
 ```
 mongod --dbpath=data
 ```
@@ -194,6 +196,8 @@ Full list of status codes on [Wikipedia](https://en.wikipedia.org/wiki/List_of_H
 ### Payload
 * Data sent back from the server
 
+# How an API looks like (aka DEMO TIME!)
+
 ## Examples of requests and responses
 
 ### Get a collection
@@ -225,20 +229,33 @@ PUT https://jsonplaceholder.typicode.com/posts/{id}
 ### Delete existing element
 DELETE https://jsonplaceholder.typicode.com/posts/{id}
 
+# CODE, CODE, CODE
 
-# How to organize our code
+This is where we code the API!
 
-# Exercises
+# Howmework
+* Create a config file to store db and port variables and use it in `server.js`
+* Implement a PATCH endpoint to allow partial edition
+* Improve POST endpoint to avoid inserting duplicates. Hint: you can avoid duplicates in two ways:
+  * Using one of the existing fields (let's say name) as a primary key in MongoDB
+  * Writing a code validation that searches in the database and checks if the record exists before inserting
+* Enhance POST and PUT validations (more robust validations, better error messages, etc)
+* Implement a search endpoint. Hints:
+  * Use GET verb
+  * Filter by name and/or association
+  * Return a collection of elements
 
-https://docs.mongodb.com/manual/reference/
-
-* Config for db and port variables
-* Avoid inserting duplicates
-* Enhance POST and PUT validations
-* Implement PATCH endpoint
-* Implement search
+# Follow-up questions
+* What happens if we have thousands of records in the database and we want to fetch them all? (hint: pagination)
+* How can we prevent our API being abused? (hint: rate limiting)
+* What if we have millions of users? (hint: scaling)
+* How can we document our API? (hint: OpenAPI)
+* Is there a standard for the JSON responses? (hint: check HATEOAS)
+* What if some resources can only be accessed by certain users? (hint: authentication and authorization)
 
 # References
+* https://docs.npmjs.com/files/package.json
+* https://docs.mongodb.com/manual/reference/
 * https://expressjs.com/
 * https://money.howstuffworks.com/business-communications/how-to-leverage-an-api-for-conferencing1.htm
 * https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82
