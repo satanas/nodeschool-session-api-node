@@ -248,7 +248,7 @@ This is where we code the API!
 # Follow-up questions
 * What happens if we have thousands of records in the database and we want to fetch them all? (hint: pagination)
 * How can we prevent our API being abused? (hint: rate limiting)
-* What if we have millions of users? (hint: scaling)
+* What if we have millions of users hitting our API concurrently? (hint: scaling)
 * How can we document our API? (hint: OpenAPI)
 * Is there a standard for the JSON responses? (hint: check HATEOAS)
 * What if some resources can only be accessed by certain users? (hint: authentication and authorization)
